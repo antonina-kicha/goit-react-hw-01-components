@@ -20,7 +20,6 @@ export const Description = styled.div`
 
 export const Image = styled.img`
     border-radius: 50%;
-    width: 140px;
     margin-bottom: 20px;
 `;
 

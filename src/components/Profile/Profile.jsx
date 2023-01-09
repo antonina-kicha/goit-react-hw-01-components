@@ -8,7 +8,8 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                 <Image
                 src={avatar}
                     alt="User avatar"
-                    width="200"
+                    width="140"
+                    height="140"
                     />
                 <Name>{ username}</Name>
                 <p>@{tag}</p>
@@ -33,11 +34,15 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
     )
 }
 
-//  "username": "Jacques Gluke",
-//   "tag": "jgluke",
-//   "location": "Ocho Rios, Jamaica",
-//   "avatar": "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
-//   "stats": {
-//     "followers": 5603,
-//     "views": 4827,
-//     "likes": 1308
+Profile.propTypes = {
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.exact({
+        followers: PropTypes.number.isRequired,
+        views: PropTypes.number.isRequired,
+        likes: PropTypes.number.isRequired
+    }).isRequired
+
+}
